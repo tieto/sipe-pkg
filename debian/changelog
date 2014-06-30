@@ -1,4 +1,21 @@
-pidgin-sipe (1.18.1-1) UNRELEASED; urgency=medium
+pidgin-sipe (1.18.2-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+        - Fixed #255: Crash when PersistentChat sends BYE instead of response
+        - Fixed #248: Remove libpurple SSL configure check
+        - Fixed #245: "Unable to resolve DNS SRV record" error when joining
+          conference
+        - Fixed #210: Conference call ends with error message
+        - ews: extract settings also from type EXPR
+        - ucs: honor user specified email URL
+        - updated Transifex URLs
+        - updated translations: Hindi (hi), Telugu (te)
+  * Don't build with -Wundef (Closes: #751060)
+        - fixes build against MIT Kerberos 1.12.1.
+
+ -- Jakub Adam <jakub.adam@ktknet.cz>  Fri, 13 Jun 2014 08:10:41 +0200
+
+pidgin-sipe (1.18.1-1) unstable; urgency=medium
 
   * New upstream release (Closes: #741014).
         - Fixed #238: False "not delivered" in conference
@@ -26,8 +43,9 @@ pidgin-sipe (1.18.1-1) UNRELEASED; urgency=medium
           * thanks to David Woodhouse and Simo Sorce for the GSSAPI information
         - implement internal keepalive handling
         - implement crypto backend based on OpenSSL
+  * Explicitly disable usage of OpenSSL as the cryptographic backend.
 
- -- Jakub Adam <jakub.adam@ktknet.cz>  Mon, 14 Apr 2014 09:16:43 +0200
+ -- Jakub Adam <jakub.adam@ktknet.cz>  Fri, 18 Apr 2014 10:23:44 +0200
 
 pidgin-sipe (1.17.3-1) unstable; urgency=medium
 
