@@ -15,7 +15,7 @@ Package: pidgin-sipe
 Section: net
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: gstreamer0.10-ffmpeg, gstreamer0.10-x
+Recommends: gstreamer0.10-ffmpeg, gstreamer0.10-x, freerdp-x11 (> 1.1~)
 Description: Pidgin plugin for MS Office Communicator and MS Lync
  A third-party plugin for the Pidgin multi-protocol instant messenger.
  It implements the extended version of SIP/SIMPLE used by various products:
