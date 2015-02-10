@@ -1,10 +1,8 @@
-pidgin-sipe (1.18.3-1) UNRELEASED; urgency=medium
+pidgin-sipe (1.19.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
-        - Fixed #259: HTML response to EWS autodiscover triggers libxml2 assert
-        - Fixed #258: V&V call gets rejected when IPv6 is enabled
 
- -- Jakub Adam <jakub.adam@ktknet.cz>  Thu, 04 Sep 2014 15:39:33 +0200
+ -- Jakub Adam <jakub.adam@ktknet.cz>  Tue, 10 Feb 2015 18:05:03 +0100
 
 pidgin-sipe (1.18.2-1) UNRELEASED; urgency=medium
 
