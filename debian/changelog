@@ -1,6 +1,7 @@
 pidgin-sipe (1.19.1-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Build-Depends on libfreerdp-dev.
 
  -- Jakub Adam <jakub.adam@ktknet.cz>  Fri, 22 May 2015 15:18:06 +0200
 
