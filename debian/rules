@@ -1,5 +1,9 @@
 #!/usr/bin/make -f
 
+GSTREAMER14_PATH := /opt/gstreamer1.4/lib/$(DEB_HOST_MULTIARCH)
+
+export PKG_CONFIG_PATH = $(GSTREAMER14_PATH)/pkgconfig
+
 DEB_CONFIGURE_EXTRA_FLAGS := --enable-purple=3 --disable-telepathy
 
 %:
@@ -7,6 +11,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --enable-purple=3 --disable-telepathy
 
 override_dh_auto_configure:
 	./autogen.sh
+	LD_LIBRARY_PATH=$(GSTREAMER14_PATH) \
 	dh_auto_configure -- $(DEB_CONFIGURE_EXTRA_FLAGS)
 
 override_dh_auto_install:
@@ -31,5 +36,11 @@ override_dh_auto_clean:
 		depcomp install-sh intltool-extract.in intltool-merge.in intltool-update.in ltmain.sh \
 		missing test-driver
 	find -type f -name Makefile.in\* -delete
+
+override_dh_auto_test:
+	LD_LIBRARY_PATH=$(GSTREAMER14_PATH) dh_auto_test
+
+override_dh_shlibdeps:
+	dh_shlibdeps -lopt/gstreamer1.4/lib/$(DEB_HOST_MULTIARCH)
 
 .PHONY: override_dh_auto_configure override_dh_auto_install override_dh_strip override_dh_installdocs override_dh_auto_clean
