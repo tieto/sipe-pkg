@@ -1,8 +1,8 @@
-pidgin-sipe (1.20.1-1) UNRELEASED; urgency=medium
+pidgin-sipe (1.21.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
 
- -- Jakub Adam <jakub.adam@ktknet.cz>  Tue, 27 Oct 2015 14:23:48 +0100
+ -- Jakub Adam <jakub.adam@ktknet.cz>  Mon, 25 Apr 2016 07:23:27 +0200
 
 pidgin-sipe (1.18.2-1) UNRELEASED; urgency=medium
 
